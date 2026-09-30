@@ -45,6 +45,17 @@ Organize seu README focando em ser objetivo, com evidências de resultados e cit
     └── ...
 ```
 
+## Resultados aula a aula
+### Aula 01
+
+Post no fórum feito:
+
+![Post no fórum da Aula 01](images/aula_01_post_forum.png)
+
+Resposta a outro post no fórum:
+
+![Resposta a outro post no fórum da Aula 01](images/aula_01_resp_forum.png)
+
 ## Disclaimer de Uso Ético
 
 Este repositório foi desenvolvido exclusivamente para fins acadêmicos e de pesquisa no contexto da disciplina **PCS5917 – IA Adversarial**.
