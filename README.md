@@ -45,6 +45,16 @@ Organize seu README focando em ser objetivo, com evidências de resultados e cit
     └── ...
 ```
 
+## 3. Como executar
+
+Ambiente gerenciado com [uv](https://docs.astral.sh/uv/), em Python 3.13 (mesma versão do runtime do Colab).
+
+- **Local:** `uv sync` e selecione o kernel `.venv` no VS Code.
+- **Colab pelo VS Code:** com a extensão [Google Colab](https://marketplace.visualstudio.com/items?itemName=Google.colab), abra o notebook, clique em *Select Kernel* → *Colab* e escolha o runtime (GPU, se precisar).
+- **Colab no navegador:** use o badge *Open in Colab* no topo de cada notebook.
+
+No Colab, a primeira célula de cada notebook instala apenas os pacotes que o Colab não traz pré-instalados (`COLAB_EXTRA_PACKAGES`).
+
 ## Resultados aula a aula
 ### Aula 01
 

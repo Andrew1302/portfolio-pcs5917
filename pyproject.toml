@@ -1,0 +1,12 @@
+[project]
+name = "portfolio-pcs5917"
+version = "0.1.0"
+description = "Portfolio for PCS5917 - Adversarial AI (Poli-USP)"
+readme = "README.md"
+requires-python = ">=3.13,<3.14"
+dependencies = []
+
+[dependency-groups]
+dev = [
+    "ipykernel>=7.4.0",
+]
