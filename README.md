@@ -101,6 +101,8 @@ Referências:
 
 ### Aula 03
 
+#### Parte 1
+
 Notebook: [`notebooks/aula_03/aula-03-asvspoof.ipynb`](notebooks/aula_03/aula-03-asvspoof.ipynb)
 
 Classificação binária de áudio em legítimo (*bonafide*) ou falso (*spoof*) no cenário *logical access* (TTS e conversão de voz) do ASVspoof 2019 [1, 2]. O escopo ficou só no LA porque *logical* e *physical access* têm artefatos diferentes.
@@ -154,6 +156,14 @@ Referências:
 3. T. Giannakopoulos. *pyAudioAnalysis: An open-source Python library for audio signal analysis*. PLoS ONE, 10(12), e0144610, 2015. DOI: [10.1371/journal.pone.0144610](https://doi.org/10.1371/journal.pone.0144610).
 4. N. M. Müller, F. Dieckmann, P. Czempin, R. Canals, K. Böttinger, J. Williams. *Speech is Silver, Silence is Golden: What do ASVspoof-trained Models Really Learn?* ASVspoof 2021 Workshop. [arXiv:2106.12914](https://arxiv.org/abs/2106.12914).
 5. F. V. de Almeida, V. T. Hayashi. *Identificação de Áudio Vocaloid com Support Vector Machines: um Estudo de Caso da Hatsune Miku*. SBCM 2021. [sol.sbc.org.br/index.php/sbcm/article/view/19451](https://sol.sbc.org.br/index.php/sbcm/article/view/19451).
+
+#### Parte 2
+
+Além disso, tivemos uma palestra com o Prof. Dr. Reginaldo Arakaki, na qual meu grupo (G4) ficou responsável por discutir a situação (não tão) hipotética de um usuário que, usando as credenciais de um funcionário, conseguiu fazer transações fraudulentas via Pix.
+
+Discutimos o problema em grupo e, em seguida, o Prof. Arakaki também fez considerações sobre o caso. Abaixo estão algumas das análises que escrevemos durante a aula:
+
+![Análises do grupo G4 no Miro](images/aula_03_miro_screenshot.png)
 
 ## Disclaimer de Uso Ético
 
