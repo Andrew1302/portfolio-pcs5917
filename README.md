@@ -2,7 +2,7 @@
 
 ## Portfólio Individual
 
-**Aluno:** Nome do aluno ou aluna  
+**Aluno:** Andrew Carvalho de Sá 
 **Disciplina:** PCS5917 – IA Adversarial  
 **Período:** 3º período de 2026  
 **Instituição:** Universidade de São Paulo – Escola Politécnica  
@@ -31,27 +31,32 @@ Organize seu README focando em ser objetivo, com evidências de resultados e cit
 
 ```text
 .
-├── README.md (com registros de resultados)
-├── notebooks/ (colocar aqui os notebooks citados no README)
-│   ├── aula-02-llm-jailbreaks.ipynb
-│   ├── aula-03-asvspoof.ipynb
-│   ├── aula-04-nanogcg.ipynb
-│   ├── aula-05-pair.ipynb (e/ou cipherchat)
-│   ├── aula-06-llm-judge.ipynb
-│   └── aula-07-defesas-llm.ipynb
-├── images/ (colocar aqui as imagens usadas no README)
-│   └── ...
-└── outros/
-    └── ...
+├── README.md                     (registros de resultados por aula)
+├── notebooks/                    (uma pasta por aula, com o notebook e os arquivos usados só por ela)
+│   ├── aula_02/
+│   │   └── aula-02-llm-jailbreaks.ipynb
+│   ├── aula_03/
+│   │   └── aula-03-asvspoof.ipynb
+│   ├── aula_04/
+│   │   └── aula-04-nanogcg.ipynb
+│   ├── aula_05/
+│   │   └── aula-05-pair.ipynb    (e/ou cipherchat)
+│   ├── aula_06/
+│   │   └── aula-06-llm-judge.ipynb
+│   └── aula_07/
+│       └── aula-07-defesas-llm.ipynb
+├── images/                       (imagens usadas no README)
+├── src/pcs5917/                  (biblioteca interna, apenas para código reutilizado entre aulas)
+└── pyproject.toml / uv.lock      (ambiente Python)
 ```
 
 ## 3. Como executar
 
 Ambiente gerenciado com [uv](https://docs.astral.sh/uv/), em Python 3.13 (mesma versão do runtime do Colab).
 
-- **Local:** `uv sync` e selecione o kernel `.venv` no VS Code.
-- **Colab pelo VS Code:** com a extensão [Google Colab](https://marketplace.visualstudio.com/items?itemName=Google.colab), abra o notebook, clique em *Select Kernel* → *Colab* e escolha o runtime (GPU, se precisar).
-- **Colab no navegador:** use o badge *Open in Colab* no topo de cada notebook.
+- **Local:** `uv sync` e kernel `.venv` no VS Code.
+- **Colab pelo VS Code:** extensão [Google Colab](https://marketplace.visualstudio.com/items?itemName=Google.colab), em *Select Kernel* → *Colab*, com runtime de GPU quando necessário.
+- **Colab no navegador:** badge *Open in Colab* no topo de cada notebook.
 
 No Colab, a primeira célula de cada notebook instala apenas os pacotes que o Colab não traz pré-instalados (`COLAB_EXTRA_PACKAGES`).
 
