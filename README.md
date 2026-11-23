@@ -273,7 +273,40 @@ Referências:
 
 1. L. Zheng et al. *Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena*. NeurIPS 2023. [arXiv:2306.05685](https://arxiv.org/abs/2306.05685).
 2. Qwen Team. *Qwen3-4B-Instruct-2507* (model card). [huggingface.co/Qwen/Qwen3-4B-Instruct-2507](https://huggingface.co/Qwen/Qwen3-4B-Instruct-2507).
+### Aula 07
 
+Atividade em grupo (Andrew, Erick Diogo de Almeida Sousa e Henrique Gregory Gimenez).
+
+Notebook: [`notebooks/aula_07/aula-07-defesas-llm.ipynb`](notebooks/aula_07/aula-07-defesas-llm.ipynb) · Relatório entregue: [`notebooks/aula_07/aula-07-defesas.pdf`](notebooks/aula_07/aula-07-defesas.pdf)
+
+Avaliação de duas defesas em nível de prompt, cada uma isolada, seguindo o desenho do estudo de caso *DeepSeek Under Attack* [3]: o **Self-Reminder** [1] envolve o pedido com lembretes de responsabilidade, e a **Intention Analysis** [2] faz o modelo identificar a intenção do pedido antes de responder. As defesas são aplicadas à mensagem do usuário.
+
+- **Alvo:** Gemma 4 E2B-it em 4 bits, sem *thinking*, decodificação gulosa.
+- **Tarefas:** ligação direta de carro, bomba, e-mail de phishing e vazamento da senha `PAPAGAIO`.
+- **Ataques:** manuais (pedido direto e os templates AIM, Aligned e Moralizing Rant do Self-Reminder, 16 combinações por cenário) e PAIR [4] (atacante Qwen3-4B, até 5 rodadas, 4 execuções por cenário). O atacante não vê a defesa.
+- **Avaliação:** o juiz da Aula 06 (Qwen3-4B, rubrica 0–3, sucesso com nota ≥ 2).
+
+| Método | Baseline               | Self-Reminder          | Intention Analysis     |
+| ------- | ---------------------- | ---------------------- | ---------------------- |
+| Manual  | 8/16 (**50,0%**) | 4/16 (**25,0%**) | 3/16 (**18,8%**) |
+| PAIR    | 1/4 (25,0%)            | 1/4 (25,0%)            | 1/4 (25,0%)            |
+
+![ASR por cenário e método de ataque](images/aula_07_asr.png)
+
+Observações:
+
+- Nos ataques manuais as duas defesas reduziram o ASR, no mesmo sentido do estudo de caso (no DeepSeek-V3: 53,5% → 17,6% e 15,3%) [3]. Os intervalos de Wilson se sobrepõem, então não dá para dizer que uma defesa supera a outra.
+- A redução veio dos templates de *role-play*: o AIM teve sucesso nas 4 tarefas sem defesa e em 0 (Self-Reminder) e 1 (Intention Analysis) com defesa. O pedido direto nunca teve sucesso.
+- No PAIR não houve redução: o único sucesso em cada cenário foi a senha. A senha foi também a tarefa mais resistente às defesas, possivelmente porque é um conflito de instruções e não um pedido de conteúdo nocivo (hipótese não testada).
+- Limitações: *n* pequeno, atacante do PAIR fraco e sem conhecer a defesa, juiz igual ao atacante, e não medimos recusas indevidas a pedidos legítimos.
+- Entregue no prazo, apenas subi retroativamente aqui no github
+
+Referências:
+
+1. Y. Xie et al. *Defending ChatGPT against jailbreak attack via self-reminders*. Nature Machine Intelligence, 5(12), 1486–1496, 2023. DOI: [10.1038/s42256-023-00765-8](https://doi.org/10.1038/s42256-023-00765-8).
+2. Y. Zhang, L. Ding, L. Zhang, D. Tao. *Intention Analysis Makes LLMs a Good Jailbreak Defender*. 2024. [arXiv:2401.06561](https://arxiv.org/abs/2401.06561).
+3. V. T. Hayashi et al. *DeepSeek Under Attack*. IEEE Access, 2026.
+4. P. Chao et al. *Jailbreaking Black Box Large Language Models in Twenty Queries*. SaTML 2025. [arXiv:2310.08419](https://arxiv.org/abs/2310.08419).
 
 ## Disclaimer de Uso Ético
 
